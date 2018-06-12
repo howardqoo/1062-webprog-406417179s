@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // home page
-router.get('/account', function(req, res, next) {
+router.get('/', function(req, res, next) {
 
     var db = req.con;
     var data = "";
@@ -28,7 +28,7 @@ router.get('/account', function(req, res, next) {
 });
 
 // add page
-router.get('/add', function(req, res, next) {
+router.get('/account/add', function(req, res, next) {
 
     // use userAdd.ejs
     res.render('userAdd', { title: 'Add User', msg: '' });
