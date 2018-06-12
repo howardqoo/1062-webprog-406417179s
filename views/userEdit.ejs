@@ -12,7 +12,8 @@
         var id = document.getElementsByName('userid')[0].value;
         var pwd = document.getElementsByName('password')[0].value;
         var mail = document.getElementsByName('email')[0].value;
-        if (id && pwd && mail) {
+        var phone = document.getElementsByName('phone')[0].value;
+        if (id && pwd && mail && phone) {
             return true;
         }
         alert('please input the info.');
@@ -37,6 +38,10 @@
         <div class="row">
             <label>email：</label>
             <input type="text" name="email" placeholder="email" value="<%=data[0].email  %>">
+        </div>
+        <div class="row">
+            <label>phone：</label>
+            <input type="text" name="phone" placeholder="phone" value="<%=data[0].phone  %>">
         </div>
         <div class="row">
             <input class="btn" type='submit' value='Submit'>

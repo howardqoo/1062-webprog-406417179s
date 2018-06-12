@@ -57,7 +57,8 @@ router.post('/userAdd', function(req, res, next) {
             var sql = {
                 userid: req.body.userid,
                 password: req.body.password,
-                email: req.body.email
+                email: req.body.email,
+                phone: req.body.phone
             };
 
             //console.log(sql);
@@ -104,7 +105,8 @@ router.post('/userEdit', function(req, res, next) {
     var sql = {
         userid: req.body.userid,
         password: req.body.password,
-        email: req.body.email
+        email: req.body.email,
+        phone: req.body.phone
     };
 
     var qur = db.query('UPDATE account SET ? WHERE id = ?', [sql, id], function(err, rows) {
